@@ -4,6 +4,7 @@ import IAddedItem from './structuers/addedItem';
 import loadTiles from './loadTiles';
 import GameBoard from './gameBoard';
 import reset from './reset';
+import NewItemInput, { getAddedItems } from './newItemInput';
 
 function Table() {
     const [items, setItems] = useState<IItem[][]>();
@@ -11,6 +12,8 @@ function Table() {
     
     const loadItems = () => {
         //loads tiles into items
+        setAddedItems(getAddedItems);
+        console.log(addedItems)
         setItems(loadTiles(addedItems))
     }
     const testFunc = () => {
@@ -23,6 +26,7 @@ function Table() {
             <button onClick={testFunc}>TEST BUTTON</button>
             <button onClick={() => reset(items)}>Reset</button>
             <GameBoard boardTiles={items}/>
+            <NewItemInput />
         </div>
     )
 }
