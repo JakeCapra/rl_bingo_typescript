@@ -4,7 +4,7 @@ import { GetBingoTileItems } from './BingoItemRepository';
 import IAddedItem from './structuers/addedItem'
 import IItem from './structuers/tileItem';
 
-function loadTiles(addedTiles: IAddedItem[] | undefined) {
+function loadTiles(addedTiles: IAddedItem[] | undefined, rankSelected: number) {
    
     // defining the array like this is the only way it works, idk why, just dont look at it
     let items: IItem[][] = [
@@ -16,7 +16,7 @@ function loadTiles(addedTiles: IAddedItem[] | undefined) {
     ]
     
     // array of strings
-    var availableTiles = GetBingoTileItems(0);
+    var availableTiles = GetBingoTileItems(rankSelected);
     var usedIndex: number[] = [];
     var usedIndexLoad: number[] = [];
     let tileArr = []; // tiles to added to board

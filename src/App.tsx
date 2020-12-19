@@ -7,29 +7,46 @@ import IAddedItem from './components/structuers/addedItem';
 import loadTiles from './components/loadTiles';
 import GameBoard from './components/gameBoard';
 import reset from './components/reset';
-import NewItemInput, { getAddedItems } from './components/newItemInput';
+import NewItemInput from './components/newItemInput';
+import About from './components/about';
+import RankSelector from './components/RankSelector'
 
 function App() {
   const [items, setItems] = useState<IItem[][]>();
-    const [addedItems, setAddedItems] = useState<IAddedItem[]>() //user added items
+  const [addedItems, setAddedItems] = useState<IAddedItem[]>([]);//user added items
+  const [rankSelected, setRankSelected] = useState(0);
     
     const loadItems = () => {
-        // I know there is a better way to do this, but idc
-        setAddedItems(getAddedItems);
         //loads tiles into items
-        setItems(loadTiles(addedItems))
+        setItems(loadTiles(addedItems, rankSelected))
     }
     const testFunc = () => {
-        //console.log(items);
+        console.log(addedItems);
     }
+    function handleAdded(newValue: IAddedItem) {
+        // gets called when user adds a new tile
+        setAddedItems([...addedItems, newValue])
+    }
+    function handleChecked(id: any) {
+        // gets called from newUserInput.tsx when checkbox is clicked
+        addedItems[id].use = !addedItems[id].use
+        setAddedItems(addedItems);
+    }
+    function handleRankChange(value: number) {
+        setRankSelected(value);
+    }
+
+
 
     return (
         <div>
           <div id="leftDiv">
               <button onClick={loadItems}>Create Board</button>
-              {/* <button onClick={testFunc}>TEST BUTTON</button> */}
               <button onClick={() => reset(items)}>Reset</button>
-              <NewItemInput />
+              <RankSelector onRankSelected={handleRankChange}/>
+              {/* <button onClick={testFunc}>TEST BUTTON</button> */}
+              <NewItemInput onAdd={handleAdded} onCheck={handleChecked}/>
+              <About />
           </div>
           <div id="rightDiv">
             <GameBoard boardTiles={items}/>

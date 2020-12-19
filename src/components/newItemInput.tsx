@@ -1,10 +1,7 @@
 import React, { FunctionComponent, useState } from 'react';
 import IAddedItem from './structuers/addedItem';
 
-// probably should use a store, but oh well, i suck
-var userAddedItems: IAddedItem[] = [];
-
-const NewItemInput: FunctionComponent = () => {
+function NewItemInput(props: any) {
     const [input, setInput] = useState("");
     const [items, setItems] = useState<IAddedItem[]>([]);
 
@@ -14,11 +11,15 @@ const NewItemInput: FunctionComponent = () => {
     const noReload = (e: any) => {
         e.preventDefault();
     }
+    const handleCheck = (e: any) => {
+        //updates use at appropriate index on addedItems variable from app.tsx
+        props.onCheck(e.target.id);
+    }
     
     const onSubmit = (e: any) => {
         e.preventDefault();
-        setItems([...items, {value: input, use: false, id: items.length}]);
-        userAddedItems = items;
+        setItems([...items, {value: input, use: false, id: items.length}])
+        props.onAdd({value: input, use: false, id: items.length});
     }
     
     return (
@@ -27,10 +28,10 @@ const NewItemInput: FunctionComponent = () => {
                 <input id="inputBox" type="text" placeholder="Enter a bingo tile" onChange={handleChage} />
             </form>
             <button onClick={onSubmit}>Enter</button>
-            <div>
+            <div id="customInputDiv">
                 {items.map(item => 
                                     <label className="customInput" htmlFor={item.id.toString()}>{item.value}
-                                    <input type="checkbox" id={item.id.toString()} onClick={(e) => {item.use=!item.use}} />
+                                    <input type="checkbox" id={item.id.toString()} onClick={handleCheck} />
                                     <span className="checkmark"></span>
                                     <hr />
                                     </label>
@@ -39,11 +40,5 @@ const NewItemInput: FunctionComponent = () => {
         </div>
     )
 }
-
-export function getAddedItems() {
-    console.log(userAddedItems)
-    return userAddedItems;
-}
-
 
 export default NewItemInput;
