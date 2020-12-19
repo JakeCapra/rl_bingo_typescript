@@ -17,7 +17,7 @@ const NewItemInput: FunctionComponent = () => {
     
     const onSubmit = (e: any) => {
         e.preventDefault();
-        setItems([...items, {value: input, use: true, id: items.length}]);
+        setItems([...items, {value: input, use: false, id: items.length}]);
         userAddedItems = items;
     }
     
@@ -29,7 +29,7 @@ const NewItemInput: FunctionComponent = () => {
             <button onClick={onSubmit}>Enter</button>
             <div>
                 {items.map(item => 
-                                    <label className="customInput" htmlFor={item.id.toString()}>{item.value} S {item.id}
+                                    <label className="customInput" htmlFor={item.id.toString()}>{item.value}
                                     <input type="checkbox" id={item.id.toString()} onClick={(e) => {item.use=!item.use}} />
                                     <span className="checkmark"></span>
                                     <hr />
@@ -41,6 +41,7 @@ const NewItemInput: FunctionComponent = () => {
 }
 
 export function getAddedItems() {
+    console.log(userAddedItems)
     return userAddedItems;
 }
 

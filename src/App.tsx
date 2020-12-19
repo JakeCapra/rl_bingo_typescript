@@ -25,12 +25,16 @@ function App() {
 
     return (
         <div>
-            <button onClick={loadItems}>Create Board</button>
-            {/* <button onClick={testFunc}>TEST BUTTON</button> */}
-            <button onClick={() => reset(items)}>Reset</button>
+          <div id="leftDiv">
+              <button onClick={loadItems}>Create Board</button>
+              {/* <button onClick={testFunc}>TEST BUTTON</button> */}
+              <button onClick={() => reset(items)}>Reset</button>
+              <NewItemInput />
+          </div>
+          <div id="rightDiv">
             <GameBoard boardTiles={items}/>
-            <NewItemInput />
-        </div>
+          </div>
+       </div>
     )
  
  

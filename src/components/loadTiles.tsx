@@ -31,6 +31,7 @@ function loadTiles(addedTiles: IAddedItem[] | undefined) {
             }
         } 
     }
+    console.log(addedTiles);
 
     // if user added tiles have already been added to addedTiles
     var insertAmt = 24 - tileArr.length;

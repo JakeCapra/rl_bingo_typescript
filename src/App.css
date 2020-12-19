@@ -33,6 +33,24 @@ code {
   min-height: 100%;
 }
 
+#leftDiv {
+  float: left;
+  width: 15%;
+  min-height: 99%;
+  background: purple;
+  opacity: .9;
+  color: white;
+  border: 3px solid white;
+  text-align: center;
+  position: absolute;
+}
+
+#rightDiv {
+  width: 80%;
+  float: right;
+  text-align: center;
+}
+
 .logoLink {
   width: 5vw;
   height: auto;
