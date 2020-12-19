@@ -1,20 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 //import bgvid from './components/images/bgvideo.mp4';
 import picture from './components/images/bg.png';
 import './App.css';
-import Table from './components/table'
+import IItem from './components/structuers/tileItem';
+import IAddedItem from './components/structuers/addedItem';
+import loadTiles from './components/loadTiles';
+import GameBoard from './components/gameBoard';
+import reset from './components/reset';
+import NewItemInput, { getAddedItems } from './components/newItemInput';
 
 function App() {
-  return (
-    <div>
-        {/* <img src={picture} id="backgroundImage"/> */}
-        {/* <video autoPlay={true} loop={true} muted={true} id="bgVid">
-            <source src={bgvid} type="video/mp4" />
-        </video> */}
-        <Table />
+  const [items, setItems] = useState<IItem[][]>();
+    const [addedItems, setAddedItems] = useState<IAddedItem[]>() //user added items
+    
+    const loadItems = () => {
+        // I know there is a better way to do this, but idc
+        setAddedItems(getAddedItems);
+        //loads tiles into items
+        setItems(loadTiles(addedItems))
+    }
+    const testFunc = () => {
+        //console.log(items);
+    }
 
-    </div>
-  );
+    return (
+        <div>
+            <button onClick={loadItems}>Create Board</button>
+            {/* <button onClick={testFunc}>TEST BUTTON</button> */}
+            <button onClick={() => reset(items)}>Reset</button>
+            <GameBoard boardTiles={items}/>
+            <NewItemInput />
+        </div>
+    )
+ 
+ 
+ 
+ 
+ 
+  // return (
+  //   <div>
+  //       {/* <img src={picture} id="backgroundImage"/> */}
+  //       {/* <video autoPlay={true} loop={true} muted={true} id="bgVid">
+  //           <source src={bgvid} type="video/mp4" />
+  //       </video> */}
+  //       <Table />
+
+  //   </div>
+  // );
 }
 
 // for image (if in use)

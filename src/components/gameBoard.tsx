@@ -26,13 +26,10 @@ const GameBoard: FunctionComponent<{boardTiles: IItems[][] | undefined}> = ({boa
         return;
     }
 
-
-
-
     return (
         <table>
             <tbody>
-                {boardTiles.map(row => <tr className="row">{row.map(cell => <th id={"" + cell.colIndex + cell.rowIndex} className="boardItem" onClick={(e) => handleClick(e)}>{cell.value}</th>)}</tr>)}
+                {boardTiles.map(row => <tr className="row">{row.map(cell => <th id={"" + cell.colIndex + cell.rowIndex} className="boardItem" style={{backgroundColor: 'red'}} onClick={(e) => handleClick(e)}>{cell.value}</th>)}</tr>)}
             </tbody>
         </table>
 
