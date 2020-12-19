@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+//import bgvid from './components/images/bgvideo.mp4';
+import picture from './components/images/bg.png';
 import './App.css';
+import Table from './components/table'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {/* <img src={picture} id="backgroundImage"/> */}
+        {/* <video autoPlay={true} loop={true} muted={true} id="bgVid">
+            <source src={bgvid} type="video/mp4" />
+        </video> */}
+        <Table />
+
     </div>
   );
+}
+
+// for image (if in use)
+const bgStyle = {
+  minHeight: "100%",
+  minWidth: "1024px",
+  width: "100%",
+  heigth: "auto",
+  //position: "fixed",
+  top: "0",
+  left: "0",
+  zIndex: "-2"
 }
 
 export default App;
