@@ -10,6 +10,8 @@ You can view and use the site [here](https://jakecapra.github.io/rlbingo/)
 Originally I wrote this using javascript and react, but ended up rewritting it in typescript.
 <a href="https://github.com/Mikesnorth">Mike North</a> created the rank selector component, and I copied it over from the original repo.
 
+Also the picutres below are to the old repo, and I don't really want to replace them since no one will see this.
+
 ### Clone the Repo
 <img src="./readmePictures/img1.png" alt="GitHub Clone">
 <img src="./readmePictures/img2.png" alt="GitHub Copy">
