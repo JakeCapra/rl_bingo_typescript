@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/rl_bingo_typescript/static/css/main.d7202557.chunk.css",
+    "main.js": "/rl_bingo_typescript/static/js/main.e35e164b.chunk.js",
+    "main.js.map": "/rl_bingo_typescript/static/js/main.e35e164b.chunk.js.map",
+    "runtime-main.js": "/rl_bingo_typescript/static/js/runtime-main.4df52efd.js",
+    "runtime-main.js.map": "/rl_bingo_typescript/static/js/runtime-main.4df52efd.js.map",
+    "static/js/2.585cc676.chunk.js": "/rl_bingo_typescript/static/js/2.585cc676.chunk.js",
+    "static/js/2.585cc676.chunk.js.map": "/rl_bingo_typescript/static/js/2.585cc676.chunk.js.map",
+    "static/js/3.1573764b.chunk.js": "/rl_bingo_typescript/static/js/3.1573764b.chunk.js",
+    "static/js/3.1573764b.chunk.js.map": "/rl_bingo_typescript/static/js/3.1573764b.chunk.js.map",
+    "index.html": "/rl_bingo_typescript/index.html",
+    "static/css/main.d7202557.chunk.css.map": "/rl_bingo_typescript/static/css/main.d7202557.chunk.css.map",
+    "static/js/2.585cc676.chunk.js.LICENSE.txt": "/rl_bingo_typescript/static/js/2.585cc676.chunk.js.LICENSE.txt",
+    "static/media/dropshotbg.7257290a.mp4": "/rl_bingo_typescript/static/media/dropshotbg.7257290a.mp4",
+    "static/media/githubLogo.c7f632ed.png": "/rl_bingo_typescript/static/media/githubLogo.c7f632ed.png",
+    "static/media/redditLogo.e987f598.png": "/rl_bingo_typescript/static/media/redditLogo.e987f598.png",
+    "static/media/steamLogo.1b80f698.png": "/rl_bingo_typescript/static/media/steamLogo.1b80f698.png",
+    "static/media/winVideo.de23d72e.mp4": "/rl_bingo_typescript/static/media/winVideo.de23d72e.mp4",
+    "static/media/youTubeLogo.e8b24b34.png": "/rl_bingo_typescript/static/media/youTubeLogo.e8b24b34.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4df52efd.js",
+    "static/js/2.585cc676.chunk.js",
+    "static/css/main.d7202557.chunk.css",
+    "static/js/main.e35e164b.chunk.js"
+  ]
+}
