@@ -1,11 +1,17 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import IItems from './structuers/tileItem';
 import checkWin from './checkWin';
+import WinScreen from './winScreen';
 
 const GameBoard: FunctionComponent<{boardTiles: IItems[][] | undefined}> = ({boardTiles}) => {
-   
+    const [showWin, setShowWin] = useState(false);
+
     if (!boardTiles) {
         return <div></div>
+    }
+
+    const togglePopup = () => {
+        setShowWin(!showWin);
     }
     
     const handleClick = (e: any) => {
@@ -19,23 +25,27 @@ const GameBoard: FunctionComponent<{boardTiles: IItems[][] | undefined}> = ({boa
             e.target.style.backgroundColor = "red";
         }
         var win = checkWin(boardTiles);
-        // if (win) (
-        //     alert("Winner")
-        // )
+        if (win) {
+            togglePopup();
+        }
 
         return;
     }
 
     return (
-        <table>
+        <div>
+        <table cellSpacing="0" cellPadding="0">
             <tbody>
                 {boardTiles.map(row => <tr className="row">{row.map(cell => <th id={"" + cell.colIndex + cell.rowIndex} className="boardItem" style={{backgroundColor: 'red'}} onClick={(e) => handleClick(e)}>{cell.value}</th>)}</tr>)}
             </tbody>
         </table>
+        {showWin ?  
+            < WinScreen text='Click "Close Button" to hide popup' closePopup={togglePopup} />  
+            : null}
+    </div>
 
     )
 
 }
-
 
 export default GameBoard;

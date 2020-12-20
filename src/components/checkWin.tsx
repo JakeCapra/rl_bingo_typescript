@@ -3,8 +3,6 @@ import IItem from './structuers/tileItem';
 
 function checkWin(gameBoard: IItem[][]) {
     var pass=false;
-    // let temp = this.state.rows;
-    // let slpAmt = this.state.sleepAmt;
     
     //horizontal check
     for (var i=0; i<5; i++) {
@@ -18,8 +16,6 @@ function checkWin(gameBoard: IItem[][]) {
             }
         }
         if (pass) {
-            //await sleep(slpAmt);
-            //this.togglePopup(this)
             return pass;
         }
     }
@@ -36,8 +32,6 @@ function checkWin(gameBoard: IItem[][]) {
             }
         }
         if (pass) {
-            // await sleep(slpAmt);
-            // this.togglePopup(this)
             return pass;
         }
     }
@@ -53,8 +47,6 @@ function checkWin(gameBoard: IItem[][]) {
         }
     }
     if (pass) {
-        // await sleep(slpAmt);
-        // this.togglePopup(this)
         return pass;
     }
 
@@ -71,8 +63,6 @@ function checkWin(gameBoard: IItem[][]) {
         }
     }
     if (pass) {
-        // await sleep(slpAmt);
-        // this.togglePopup(this)
         return pass;
     }
     return false;

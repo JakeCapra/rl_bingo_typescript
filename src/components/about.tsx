@@ -14,7 +14,7 @@ function About() {
                 <a href="https://www.reddit.com/r/RocketLeague/" target="_blank"><img className="logoLink" src={redditLogo}></img></a>
                 </h3>
             <h3>
-                <a href="https://github.com/JakeCapra/rlbingo" target="_blank"><img className="logoLink" src={GitHubLogo}></img></a>
+                <a href="https://github.com/JakeCapra/rl_bingo_typescript" target="_blank"><img className="logoLink" src={GitHubLogo}></img></a>
                 <a href="https://steamcommunity.com/id/hip_dips/" target="_blank"><img className="logoLink" src={SteamLogo}></img></a>
             </h3>
         </div>

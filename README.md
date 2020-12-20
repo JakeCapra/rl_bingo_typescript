@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# Rocket League Bingo
+<img src="./readmePictures/home.png" alt="Home page">
+This is Rocket League Bingo. I created this after I watched <a href=https://www.youtube.com/watch?v=-3aVf_LilUc">this video</a> by SunlessKhan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# View the Site
+You can view and use the site [here](https://jakecapra.github.io/rlbingo/)
 
-## Available Scripts
+## Installation - (If you want to make some changes)
+### Note:
+Originally I wrote this using javascript and react, but ended up rewritting it in typescript.
+<a href="https://github.com/Mikesnorth">Mike North</a> created the rank selector component, and I copied it over from the original repo.
 
-In the project directory, you can run:
+### Clone the Repo
+<img src="./readmePictures/img1.png" alt="GitHub Clone">
+<img src="./readmePictures/img2.png" alt="GitHub Copy">
+1. Open Git Bash (or Command Prompt).
 
-### `npm start`
+2. Cd to where you want the repo to go.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Git Clone the link you got from Github.
+<img src="./readmePictures/clone.png" alt="GitHub Clone">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Download Node.js
+Download Node.js at this <a href="https://nodejs.org/en/">link</a>.
 
-### `npm test`
+## Starting Rocket League Bingo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Open cmd.
 
-### `npm run build`
+2. If it is your first install you might need to run the command **npm install -g create-react-app**. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Run the command **cd _repo path_**. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**repo path** is where ever you cloned the repo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Run the command **npm install**. Only once.
 
-### `npm run eject`
+5. You might also need to run **npm install react-router-dom**. Only once.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. Run the command **npm start**.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This should open a browser to localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you close this tab you can just type localhost:3000 into the browser
